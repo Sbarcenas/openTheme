@@ -353,7 +353,7 @@
     color: peru;
   }
   #brMenu{
-    visibility: hidden;
+    display: none;
     position: absolute;
     top:40px;
     left: 40px;
@@ -439,9 +439,8 @@
 
   @media screen and (max-width:600px){
     #brMenu{
-      display:block;
-
-
+      display: block;
+    
     }
     .menu{
       left:-100%;
