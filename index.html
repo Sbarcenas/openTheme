@@ -8,16 +8,22 @@
   <body>
     <header>
 
-      <nav class="menu">
+      <nav class="menu" id="menu">
+
         <ul class="cMenu">
           <li class="mItem"><a href="#principal" class="icon-home">Home</a></li>
-          <li class="mItem"><a href="#aboutMe"class="icon-info">About me</a></li>
+          <li class="mItem"><a href="#aboutMe"class="icon-notification">About me</a></li>
           <li class="mItem"><a href="#proyects" class="icon-svg">Proyects</a></li>
-          <li class="mItem"><a href="#info" class="icon-instagram">Info</a></li>
+          <li class="mItem"><a href="#info" class="icon-mail4">Info</a></li>
         </ul>
       </nav>
+
       <section class="portada">
-        <div class="column1"></div>
+<div class="icon-menu" id="brMenu"></div>
+        <div class="column1">
+
+
+        </div>
         <div class="column2">
           <figure>
             <img src="images/platzi.png" alt="logotipo" class="logo"/>
@@ -140,6 +146,13 @@
       </footer>
     <!--Scripts y Links-->
       <link rel="stylesheet" href="css/style.css">
+      <script type="text/javascript">
+          let $menu = document.getElementById("menu");
+        let $brMenu = document.getElementById("brMenu");
+        $brMenu.addEventListener("click",()=>{
+          $menu.classList.toggle("visible");
+        })
+      </script>
     <!--Scripts y Links-->
   </body>
 </html>

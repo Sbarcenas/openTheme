@@ -19,11 +19,11 @@
   /*ICOMOON*/
   @font-face {
     font-family: 'icomoon';
-    src:  url('../fonts/icomoon.eot?hdmgah');
-    src:  url('../fonts/icomoon.eot?hdmgah#iefix') format('embedded-opentype'),
-      url('../fonts/icomoon.ttf?hdmgah') format('truetype'),
-      url('../fonts/icomoon.woff?hdmgah') format('woff'),
-      url('../fonts/icomoon.svg?hdmgah#icomoon') format('svg');
+    src:  url('../fonts/icomoon.eot?vnwmeg');
+    src:  url('../fonts/icomoon.eot?vnwmeg#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?vnwmeg') format('truetype'),
+      url('../fonts/icomoon.woff?vnwmeg') format('woff'),
+      url('../fonts/icomoon.svg?vnwmeg#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
   }
@@ -46,11 +46,24 @@
   .icon-home:before {
     content: "\e900";
   }
-  .icon-envelop:before {
-    content: "\1f30a";
+
+  .icon-menu:before {
+    color: #FFF;
+    font-size: 30px;
+    border:1px solid white;
+    border-radius: 50%;
+    padding: 5px;
+
+    content: "\e9bd";
   }
-  .icon-info:before {
-    content: "\ea0c";
+  .icon-notification:before {
+    content: "\ea08";
+  }
+  .icon-cancel-circle:before {
+    content: "\ea0d";
+  }
+  .icon-mail4:before {
+    content: "\ea86";
   }
   .icon-facebook2:before {
     content: "\ea91";
@@ -70,6 +83,7 @@
   /************CRITICAL CSS***************/
   /*HEADER*/
   .menu{
+
   display: flex;
   justify-content: center;
   background-color: rgba(61, 64, 68,1);
@@ -338,6 +352,14 @@
     text-decoration: overline;
     color: peru;
   }
+  #brMenu{
+    visibility: hidden;
+    position: absolute;
+    top:40px;
+    left: 40px;
+    z-index: 5;
+  }
+
 
 
   /* .balls {
@@ -407,5 +429,54 @@
   /*FOOTER*/
 
   /*RESPONSIVE*/
-  
+  @media screen and (max-width:800px){
+  .vcontainer{
+    width: 100%;
+    padding: 0px;
+  }
+
+  }
+
+  @media screen and (max-width:600px){
+    #brMenu{
+      visibility: visible;
+
+
+    }
+    .menu{
+      left:-100%;
+    }
+  #proyects h2{
+    margin-left: 40px;
+  }
+  .menu{
+    background: rgba(0,0,0,.9);
+    justify-content: space-around;
+    height: 100%;
+    flex-direction: column;
+  }
+  .cMenu{
+    max-height: 40vh;
+    flex-direction: column;
+  }
+  .cMenu li{
+    border-bottom:3px  solid silver;
+    box-shadow: none;
+    border-left:none;
+  }
+  .cMenu li:first-child{
+    border-top:3px  solid silver;
+  }
+  .cMenu li a {
+    font-size: 20px;
+    color:silver;
+  }
+  .cMenu li:last-child{
+    border-right: none;
+    box-shadow: none;
+  }
+  .visible{
+    left: 0%;
+  }
+  }
  /*RESPONSIVE*/
