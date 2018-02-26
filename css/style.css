@@ -354,10 +354,11 @@
   }
   #brMenu{
     display: none;
-    position: absolute;
+    position: fixed;
     top:40px;
     left: 40px;
     z-index: 5;
+  
   }
 
 
@@ -440,7 +441,7 @@
   @media screen and (max-width:600px){
     #brMenu{
       display: block;
-    
+
     }
     .menu{
       left:-100%;
